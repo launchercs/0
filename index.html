@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه دانلود فایل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="download-card">
+            
+            <div class="file-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+            </div>
+            
+            <h1 class="file-name">آپلود فایل</h1>
+            <p class="file-description">
+                فایل موردنظر خود را انتخاب کنید (هر فرمتی پشتیبانی می‌شود)
+            </p>
+            
+            <!-- دکمه انتخاب فایل (مخفی) -->
+            <input type="file" id="fileInput" hidden>
+            
+            <!-- دکمه انتخاب فایل -->
+            <button class="download-btn" id="selectBtn">
+                <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </span>
+                <span class="btn-text">انتخاب فایل</span>
+            </button>
+            
+            <!-- اطلاعات فایل انتخاب‌شده -->
+            <div class="file-preview" id="filePreview">
+                <div class="preview-item">
+                    <span class="preview-label">📄 نام فایل:</span>
+                    <span class="preview-value" id="fileName">-</span>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label">📦 حجم:</span>
+                    <span class="preview-value" id="fileSize">-</span>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label">🗂 نوع:</span>
+                    <span class="preview-value" id="fileType">-</span>
+                </div>
+            </div>
+            
+            <!-- دکمه دانلود -->
+            <button class="download-btn secondary" id="downloadBtn" disabled>
+                <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </span>
+                <span class="btn-text">دانلود فایل</span>
+            </button>
+            
+            <!-- پیام موفقیت -->
+            <div class="success-message" id="successMessage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>دانلود با موفقیت انجام شد!</span>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+          </html>
