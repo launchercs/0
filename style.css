@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+}
+
+.download-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.file-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.file-icon svg { width: 40px; height: 40px; }
+
+.file-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.file-description {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* دکمه‌ها */
+.download-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.download-btn.secondary {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.download-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.download-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-icon svg { width: 20px; height: 20px; }
+
+/* پیش‌نمایش فایل */
+.file-preview {
+    display: none;
+    background: #f8f9ff;
+    border: 2px dashed #d0d5f0;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.file-preview.show {
+    display: block;
+    animation: slideUp 0.4s ease;
+}
+
+.preview-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 0.88rem;
+    border-bottom: 1px solid #eef0f8;
+}
+
+.preview-item:last-child { border-bottom: none; }
+
+.preview-label { color: #666; font-weight: 500; }
+.preview-value {
+    color: #333;
+    font-weight: bold;
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* پیام موفقیت */
+.success-message {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.success-message.show {
+    display: flex;
+    animation: slideUp 0.4s ease;
+}
+
+.success-message svg { width: 22px; height: 22px; }
